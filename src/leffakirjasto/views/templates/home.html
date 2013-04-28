@@ -10,19 +10,14 @@
  </div>
 
 <form method="POST" action="/">
-    <p>
-        Name: <input type="text" name="name"/>
-    </p>
-    <p>
-        Original name: <input type="text" name="original_name"/>
-    </p>
-    <p>
-        Year: <input type="text" name="year"/>
-    </p>
-    <p>
-        Director: <input type="text" name="director"/>
-    </p>
-    <input type="submit" value="Save"/>
+    <fieldset>
+        <legend>Movie info</legend>
+        <p><label class="field" for="name">Name:</label><input type="text" name="name"/></p>
+        <p><label class="field" for="original_name">Original name:</label><input type="text" name="original_name"/></p>
+        <p><label class="field" for="year">Year:</label><input type="text" name="year"/></p>
+        <p><label class="field" for="director">Director:</label><input type="text" name="director"/></p>
+        <input type="submit" value="Save"/>
+    </fieldset>
 </form>
 {% endblock %}
 

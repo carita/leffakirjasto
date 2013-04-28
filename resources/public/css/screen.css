@@ -4,7 +4,26 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#register {
+fieldset {
+    width: 500px;
+}
+
+legend {
+    font-size: 20px;
+}
+
+label.field {
+    text-align: left;
+    width: 150px;
+    float: left;
+}
+
+fieldset p {
+    clear: both;
+    padding: 5px;
+}
+
+/*#register {
     float: left;
     display: inline-block;
 }
@@ -32,24 +51,4 @@ h1 {
 #container {
     height: auto;
     margin-bottom: 10px;
-}
-
-#footer {    
-    width: 95%;
-    margin-left: 1%;
-    margin-right: 1%;
-    position:absolute;
-    bottom:0;
-    font-size: 11px;
-    font-weight: bold;
-    height: auto;    
-    text-align: center;
-    
-	padding-top: 10px;
-	
-	-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-	background-color: #E9E9E9;
-	border: 1px solid #CFCFCF;
-	border-radius: 4px;
-}
+}*/
