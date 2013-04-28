@@ -1,0 +1,12 @@
+{% extends "leffakirjasto/views/templates/base.html" %}
+
+{% block content %}
+ <div class="row-fluid">
+    <div class="span8">
+        {% for item in movies %}
+            <p>{{item}}</p>
+        {% endfor %}
+    </div>
+ </div>
+{% endblock %}
+
