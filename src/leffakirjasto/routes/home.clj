@@ -16,9 +16,6 @@
 (defn movie []
   '("Minority report", "Life", "Leijona kuningas", "Inglorious Basterds"))
 
-(defn -main [port]
-  (run-jetty app {:port (Integer. port)}))
-
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page)))
