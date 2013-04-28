@@ -2,7 +2,8 @@
   (:use leffakirjasto.routes.home
         compojure.core)
   (:require [noir.util.middleware :as middleware]
-            [compojure.route :as route]))
+            [compojure.route :as route]
+            [leffakirjasto.models.schema :as schema]))
 
 (defroutes app-routes
   (route/resources "/")
@@ -14,6 +15,7 @@
    an app server such as Tomcat
    put any initialization code here"
   []
+  (if-not (schema/initialized?) (schema/create-tables))
   (println "leffakirjasto started successfully..."))
 
 (defn destroy

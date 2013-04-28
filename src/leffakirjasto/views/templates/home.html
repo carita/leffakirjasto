@@ -4,9 +4,25 @@
  <div class="row-fluid">
     <div class="span8">
         {% for item in movies %}
-            <p>{{item}}</p>
+            <p>{{item.name}}</p>
         {% endfor %}
     </div>
  </div>
+
+<form method="POST" action="/">
+    <p>
+        Name: <input type="text" name="name"/>
+    </p>
+    <p>
+        Original name: <input type="text" name="original_name"/>
+    </p>
+    <p>
+        Year: <input type="text" name="year"/>
+    </p>
+    <p>
+        Director: <input type="text" name="director"/>
+    </p>
+    <input type="submit" value="Save"/>
+</form>
 {% endblock %}
 

@@ -16,21 +16,18 @@
   []
   (.exists (new java.io.File (str (io/resource-path) db-store ".h2.db"))))
 
-(defn create-users-table
+(defn create-movies-table
   []
   (sql/with-connection db-spec
     (sql/create-table
-      :users
-      [:id "varchar(20) PRIMARY KEY"]
-      [:first_name "varchar(30)"]
-      [:last_name "varchar(30)"]
-      [:email "varchar(30)"]
-      [:admin :boolean]
-      [:last_login :time]
-      [:is_active :boolean]
-      [:pass "varchar(100)"])))
+      :movies
+      [:id "INTEGER PRIMARY KEY AUTO_INCREMENT"]
+      [:name "varchar(50)"]
+      [:original_name "varchar(50)"]
+      [:year "integer"]
+      [:director "varchar(50)"])))
 
 (defn create-tables
   "creates the database tables used by the application"
   []
-  (create-users-table))
+  (create-movies-table))
